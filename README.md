@@ -1,4 +1,4 @@
-This is a classic Snake game with a twist. You can play solo or challenge a friend in multiplayer mode.The goal is simple: control your snake, eat fruits to grow longer, and avoid crashing into walls, yourself, or (if you’re playing multiplayer) the other snake. In single player mode, there are some sneaky obstacles to watch out for!
+### This is a classic Snake game with a twist. You can play solo or challenge a friend in multiplayer mode.The goal is simple: control your snake, eat fruits to grow longer, and avoid crashing into walls, yourself, or (if you’re playing multiplayer) the other snake. In single player mode, there are some sneaky obstacles to watch out for!
 
 
 ### Here’s what makes this game cool:

@@ -1,39 +1,80 @@
-### This is a classic Snake game with a twist. You can play solo or challenge a friend in multiplayer mode.The goal is simple: control your snake, eat fruits to grow longer, and avoid crashing into walls, yourself, or (if you’re playing multiplayer) the other snake. In single player mode, there are some sneaky obstacles to watch out for!
+# Snake Game - Syntax ke Shikar
 
+## **Introduction**
 
-### Here’s what makes this game cool:
-### Single Player Mode: Play solo and try to beat your high score.
-### Multiplayer Mode: Challenge a friend and see who’s the better snake wrangler.
-### Obstacles: In single-player mode, there are random obstacles to dodge.
-### High Score: Your best score gets saved, so you can always try to beat it.
-### Simple Controls: Easy-to-learn controls for both single-player and multiplayer modes.
+This is a **classic Snake Game** implemented in **C++** with support for both **single-player and multiplayer modes**. The game is played on a **30x30 grid**, and the objective is to **eat the fruit** while avoiding collisions with the walls, obstacles, and yourself. In multiplayer mode, two players compete to achieve the highest score.
 
+## **Features**
 
-### How to Play: 
-### Controls
-### Single Player Mode:
-### W: Move Up
-### A: Move Left
-### S: Move Down
-### D: Move Right
-### X: Quit the game
-### Multiplayer Mode:
-### Player 1:
-### W: Move Up
-### A: Move Left
-### S: Move Down
-### D: Move Right
-### Player 2:
-### I: Move Up
-### J: Move Left
-### K: Move Down
-### L: Move Right
+- **Single-player mode:** Navigate the snake, avoid obstacles, and achieve the highest score.
+- **Multiplayer mode:** Two players control separate snakes and compete.
+- **Dynamic obstacles:** Random obstacles appear in single-player mode.
+- **High Score Tracking:** The game saves the highest score in a file.
+- **Smooth Gameplay:** Uses `_kbhit()` for non-blocking input handling.
 
-### Rules of the Game 
-### Eat Fruits: Every time your snake eats a fruit (F), it grows longer, and your score increases by 10 points.
-### Don’t Crash: Avoid running into the walls.
-### Don’t bite yourself (or the other snake in multiplayer mode).
-### In single-player mode, watch out for obstacles (#).
-### Win or Lose:
-### In single-player mode, try to beat your high score.
-### In multiplayer mode, the player with the highest score when the game ends wins.
+## **How to Play**
+
+### **Controls**
+
+#### *Single Player Mode:*
+
+- Move **left**: `A`
+- Move **right**: `D`
+- Move **up**: `W`
+- Move **down**: `S`
+
+#### *Multiplayer Mode:*
+
+- **Player 1 (Snake 1 - 'O')**
+
+  - Move **left**: `A`
+  - Move **right**: `D`
+  - Move **up**: `W`
+  - Move **down**: `S`
+
+- **Player 2 (Snake 2 - 'X')**
+
+  - Move **left**: `J`
+  - Move **right**: `L`
+  - Move **up**: `I`
+  - Move **down**: `K`
+
+- **Exit Game**: Press `X`
+
+## **Game Rules**
+
+- **The game ends** if you hit a wall, an obstacle, or yourself.
+- In **multiplayer mode**, the game ends when both players are out.
+- In **single-player mode**, the game tracks and updates the **high score**.
+- **Winning Condition (Multiplayer):**
+  - The player with the highest score at the end wins.
+  - If scores are equal, the game results in a tie.
+
+## **Installation & Running the Game**
+
+1. **Compile the code** using a C++ compiler (MinGW, MSVC, etc.).
+   ```sh
+   g++ snakegame.cpp -o snakegame.exe
+   ```
+2. **Run the executable:**
+   ```sh
+   snakegame.exe
+   ```
+
+## **File Handling**
+
+- The game maintains a **high score file (**``**)**.
+- If the current score is higher than the saved high score, it updates the file.
+
+## **Future Improvements**
+
+- Add **graphical interface** instead of console-based display.
+- Introduce **power-ups** for more gameplay variations.
+- Implement **levels with increasing difficulty**.
+
+## **Author**
+
+- Developed by **Grp-Syntax ke Shikar**
+
+Enjoy playing the game! 🎮🐍
+

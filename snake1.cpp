@@ -167,7 +167,9 @@ public:
             {
                 if(head==snake1)
                     gameOver1=true;
-                gameOver2=true;
+                else{
+                    gameOver2=true;
+                }
 
             }
             if (collision(head, x, y)) 
@@ -323,12 +325,11 @@ public:
     bool IsgameOver() const                                                                   // function to check if game is over
         { 
             if (isMultiplayer)
-            {
-                if(gameOver1 && gameOver2)
-                        return gameOver1;
-            }                                                                       
-            return gameOver1;
+                     return(gameOver1 && gameOver2);                                                        
+            return gameOver1;                                                                  //for single player
+            
         } 
+ 
     
     int multi_winner()
     {

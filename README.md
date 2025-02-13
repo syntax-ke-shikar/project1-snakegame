@@ -63,7 +63,7 @@ This is a **classic Snake Game** implemented in **C++** with support for both **
 
 ## **File Handling**
 
-- The game maintains a **high score file (**``**)**.
+- The game maintains a **high score file (**`highscore.txt`**)**.
 - If the current score is higher than the saved high score, it updates the file.
 
 ## **Future Improvements**

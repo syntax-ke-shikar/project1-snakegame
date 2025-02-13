@@ -119,16 +119,16 @@ public:
         fruitY = rand() % height;
         
         for (int i = 0; i < 3; i++) {                                                               // To initialise the snake's length to 3 units
-            addtail(snake1, tail1, x1 - i, y1);
+            addsegment(snake1, tail1, x1 - i, y1);
             if (isMultiplayer) 
-                addtail(snake2, tail2, x2 + i, y2);
+                addsegment(snake2, tail2, x2 + i, y2);
         }
 
         if (!isMultiplayer) 
             obstacles();
     }
 
-    void addtail(Node*& head, Node*& tail, int x, int y) 
+    void addsegment(Node*& head, Node*& tail, int x, int y) 
     {
         Node* new_part = new Node(x, y);
         if (!head) {                                                                                
@@ -203,7 +203,7 @@ public:
                 score += 10; 
                 fruitX = rand() % width; 
                 fruitY = rand() % height;                                                            // generates next fruit coordinates
-                addtail(head, tail, prevX, prevY);                                                   // increases the tail segment
+                addsegment(head, tail, prevX, prevY);                                                   // increases the tail segment
             } 
             else 
             {
@@ -265,11 +265,14 @@ public:
                 }
 
                 // Draw Obstacles
-                for (int k=0;k<5;k++) {
+                if(!isMultiplayer)
+                {
+                    for (int k=0;k<5;k++) {
                     if (o[k].obsx == j && o[k].obsy == i) {
                         output += "#";
                         printed = true;
                         break;
+                    }
                     }
                 }
 
@@ -308,7 +311,7 @@ public:
                 case 'l': if (isMultiplayer && dir2 != LEFT) dir2 = RIGHT; break;
                 case 'i': if (isMultiplayer && dir2 != DOWN) dir2 = UP; break;
                 case 'k': if (isMultiplayer && dir2 != UP) dir2 = DOWN; break;
-                case 'x': gameOver1 = true; break;
+                case 'x': gameOver1 = true;gameOver2=true; break;
             }
         }
     }

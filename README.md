@@ -76,5 +76,5 @@ This is a **classic Snake Game** implemented in **C++** with support for both **
 
 - Developed by **Grp-Syntax ke Shikar**
 
-Enjoy playing the game! 🎮🐍
+Enjoy playing the game! 
 
